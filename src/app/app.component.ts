@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation, ViewChild } from "@angular/core";
+import { SwiperComponent } from "swiper/angular";
+
+// import Swiper core and required modules
+import SwiperCore, { EffectCards } from "swiper";
+
+SwiperCore.use([EffectCards]);
 
 @Component({
-  selector: 'app-root',
+  selector: 'avc-album-comp',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
-  title = 'album-app';
+  title = 'AVCCIT-2007';
 }
